@@ -185,19 +185,13 @@ label {
                                 <input type="password" class="form-control"  type="password" name="password" placeholder="Password" required>
                             </div>
 
-                            <div class="col-lg-12 loginbttm">
-                                <div class="col-lg-6 login-btm login-text">
-                                    <!-- Error Message -->
-                                </div>
-                                <div class="col-lg-6 login-btm login-button">
-                                    <button type="submit" class="btn btn-outline-primary">LOGIN</button>
-                                </div>
-                            </div>
+                            <input type="submit" class="btn btn-outline-primary" value="LOGIN">
+                           
                         </form>
                     </div>
                 </div>
                 <div class="col-lg-12">
-
+<br>
                     <p>Silahkan <u><a href="<?= base_url('android/register') ?>" style="color:blue;">mendaftar</a></u>  untuk mengakses.</p>
 <br>
 <br>
