@@ -1,45 +1,46 @@
-  <!-- Page Wrapper -->
-  <div id="wrapper">
+<style>
+        
+        
+        .bottom {
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
 
-<!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar"  >
+.bottom a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  /* margin: 0px auto; */
+  width: 33.333%;
+}
 
-    <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/android') ?>" style="background-color: white;">
-        <img src="<?= base_url('assets/img/susu.jpeg')?>" alt="" width="150"> 
-    </a>
-    <!-- Divider -->
+.bottom a:hover {
+  background: #f1f1f1;
+  color: black;
+}
 
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url('android')?>" style="color:black">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Menu Utama</span></a>
-    </li>
+.bottom a.active {
+  background-color: #04AA6D;
+  color: white;
+}
 
-    <!-- Divider -->
-    <hr class="sidebar-divider">
+.main {
+  padding: 16px;
+  margin-bottom: 100px;
+}
+   </style>
 
-    <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url('android/cart')?>" style="color:black">
-            <i class="fas fa-fw fa-pen"></i>
-            <span>Keranjang</span></a>
-    </li>
-    <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url('android/pesanan')?>" style="color:black">
-            <i class="fas fa-fw fa-list"></i>
-            <span>Pesanan Kamu</span></a>
-    </li>
-
-  
-    <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
-
-    <!-- Sidebar Toggler (Sidebar) -->
-    <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-    </div>
-
-
-
-</ul>
+                <!-- Begin Page Content -->
+<div class="bottom ">
+  <a href="<?= base_url('android')?>"><i class="fas fa-list"></i> <br> Menu</a>
+  <a href="<?= base_url('android/cart')?>"><i class="fas fa-shopping-cart"></i><br> Keranjang</a>
+  <a href="<?= base_url('android/pesanan')?>"><i class="fas fa-shopping-bag"></i><br> Pesanan</a>
+</div>

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid main">
 
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Pesanan Saya</h1>
@@ -60,7 +60,6 @@
                                                 <div class="h6 mb-0 mt-4 font-weight-bold text-gray-800">Ongkir : Rp. <?= $ongkir ?></div>
                                             <div class="h5 mb-0 mt-4 font-weight-bold text-gray-800">Total : Rp. <?=$datatotal + $ongkir;?></div>
                                             <br>
-                                            <?php if($datatotal !== 0){echo "Pesanan kamu sedang diproses silahkan hubungi kontak wa 087880743823"; }  ?>
                                         </div>
                                         <div class="col-auto">
                                         </div>
