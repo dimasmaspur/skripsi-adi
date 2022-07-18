@@ -5,7 +5,6 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4 mt-2">
     <div class="card-header py-3">
-        <span class="badge badge-info">Pesanan kamu sedang kami persiapan</span>
     </div>
     <div class="card-body">
 
@@ -19,6 +18,7 @@
                         <th>Qty</th>
                         <th>Subtotal</th>
                         <th>Ongkir</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,6 +35,21 @@
                         <td><?= $menu['qty'];?></td>
                         <td>Rp. <?= $menu['subtotal'];?></td>
                         <td>Rp. <?= $menu['ongkir'];?></td>
+                        <td>
+                            
+                        <?php
+                            if($menu['sent'] == 1){
+                             ?>
+                             <p class="badge badge-sm bg-info text-white">Sedang Dikirim</p>
+                             <?php
+                            }else{
+                            ?>
+                                                        <p class="badge badge-sm bg-secondary text-white">Sedang Disiapkan</p>
+
+                            <?php 
+                            }
+                            ?>    
+                        </td>
                     </tr>
                 <?php
                     $ongkir =  $menu['ongkir'];

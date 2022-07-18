@@ -295,6 +295,7 @@ class Main extends BD_Controller {
         }
 
     }
+ 
     public function menu_delete()
     {
 
@@ -478,6 +479,49 @@ class Main extends BD_Controller {
             $this->set_response($output, REST_Controller::HTTP_BAD_REQUEST);
         }
     }
+
+    public function pesanan_put(){
+
+        $id = (int) $this->get('id');
+        if($id){
+            $where = [
+                'id'=> $id
+            ];
+            $cekId = $this->Crud->readData('id','pesanan',$where)->num_rows();
+
+            if($cekId > 0){
+                $data = [
+                    "sent"      => $this->put('sent')
+                ];
+
+                $updateData = $this->Crud->updateData('pesanan',$data,$where);
+                if($updateData){
+                    $output = [
+                        'status' => 200,
+                        'error' => false,
+                        'message' => 'Success edit pesanan',
+                    ];
+                    $this->response($output, REST_Controller::HTTP_OK);
+                }else{
+                    $output = [
+                        'status' => 400,
+                        'error' => false,
+                        'message' => 'Failed edit pesanan',
+                    ];
+                    $this->response($output, REST_Controller::HTTP_BAD_REQUEST); 
+                }
+            }else{
+                $output = [
+                    'status' => 404,
+                    'error' => false,
+                    'message' => 'Failed edit pesanan or id not found',
+                ];
+                $this->response($output, REST_Controller::HTTP_NOT_FOUND); 
+            }
+        }
+
+    }
+ 
 
 
     public function pesanan_get()

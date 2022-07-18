@@ -18,6 +18,7 @@
                         <th>Nama</th>
                         <th>Qty</th>
                         <th>Subtotal</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,6 +34,22 @@
                         <td><?= $menu['nama'];?></td>
                         <td><?= $menu['qty'];?></td>
                         <td>Rp. <?= $menu['subtotal'];?></td>
+                        <td>
+                            <?php
+                            if($menu['sent'] == 1){
+                             ?>
+                             <p class="badge badge-sm bg-info text-white">Sedang Dikirim</p>
+                             <?php
+                            }else{
+                            ?>
+                            <a href="<?= base_url('dashboard/kirim/'.$menu['id']); ?>" class="btn btn-success btn-circle">
+                                <i class="fa fa-paper-plane"></i>
+                            </a>
+                            <?php 
+                            }
+                            ?>    
+                           
+                            </td>
                     </tr>
                 <?php
                     
@@ -48,4 +65,5 @@
 </div>
 
 </div>
+
 
